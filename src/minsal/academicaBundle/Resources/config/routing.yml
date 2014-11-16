@@ -1,0 +1,3 @@
+minsalacademica_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: minsalacademicaBundle:Default:index }

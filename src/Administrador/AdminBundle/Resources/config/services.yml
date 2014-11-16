@@ -1,0 +1,6 @@
+services:
+    administrador_admin.admin.evaluacion:
+        class: Administrador\AdminBundle\Admin\EvaluacionAdmin
+        arguments: [~, minsal\academicaAnBundle\Entity\Evaluacion, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Evaluacion}

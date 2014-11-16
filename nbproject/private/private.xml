@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/xampp/htdocs/AdminSonata/app/Resources/SonataUserBundle/views/Admin/Field/impersonating.html.twig</file>
+            <file>file:/C:/xampp/htdocs/AdminSonata/src/Application/Sonata/UserBundle/Entity/User.php</file>
+            <file>file:/C:/xampp/htdocs/AdminSonata/vendor/sonata-project/user-bundle/Admin/Document/GroupAdmin.php</file>
+            <file>file:/C:/xampp/htdocs/AdminSonata/vendor/sonata-project/user-bundle/Admin/Entity/GroupAdmin.php</file>
+            <file>file:/C:/xampp/htdocs/AdminSonata/vendor/sonata-project/user-bundle/Admin/Model/GroupAdmin.php</file>
+            <file>file:/C:/xampp/htdocs/AdminSonata/app/Resources/views/base.html.twig</file>
+            <file>file:/C:/xampp/htdocs/AdminSonata/src/Application/Sonata/UserBundle/Resources/translations/SonataUserBundle.es.xliff</file>
+            <file>file:/C:/xampp/htdocs/AdminSonata/src/Application/Sonata/UserBundle/Entity/Group.php</file>
+            <file>file:/C:/xampp/htdocs/AdminSonata/app/Resources/SonataUserBundle/views/layout.html.twig</file>
+            <file>file:/C:/xampp/htdocs/AdminSonata/vendor/sonata-project/user-bundle/Admin/Entity/UserAdmin.php</file>
+            <file>file:/C:/xampp/htdocs/AdminSonata/vendor/sonata-project/admin-bundle/Admin/Admin.php</file>
+            <file>file:/C:/xampp/htdocs/AdminSonata/src/Application/Sonata/UserBundle/Resources/config/doctrine/Group.orm.xml</file>
+            <file>file:/C:/xampp/htdocs/AdminSonata/src/Application/Sonata/UserBundle/Resources/config/doctrine/User.orm.xml</file>
+            <file>file:/C:/xampp/htdocs/AdminSonata/vendor/sonata-project/user-bundle/Admin/Model/UserAdmin.php</file>
+            <file>file:/C:/xampp/htdocs/AdminSonata/vendor/sonata-project/user-bundle/Admin/Document/UserAdmin.php</file>
+        </group>
+    </open-files>
+</project-private>

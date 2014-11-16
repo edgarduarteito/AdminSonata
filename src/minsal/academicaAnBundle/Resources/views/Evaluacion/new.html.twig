@@ -1,0 +1,31 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <script>
+ $('#minsal_academicaanbundle_evaluacion_porcentaje').
+        attr('data-bvalidator', 'between[0:1],required');
+ 
+    $('#minsal_academicaanbundle_evaluacion_nota').
+        attr('data-bvalidator', 'between[0:10],required');
+ 
+    //Opciones del validador
+    var optionsRed = { 
+        classNamePrefix: 'bvalidator_red_', 
+        lang: 'es'
+    };
+ 
+    //Validar el formulario
+    $('form').bValidator(optionsRed);
+</script>
+    <h1>Evaluacion</h1>
+
+    {{ form(form) }}
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('evaluacion') }}">
+            regrese a la lista
+        </a>
+    </li>
+</ul>
+{% endblock %}

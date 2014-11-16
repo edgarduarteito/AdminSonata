@@ -1,0 +1,59 @@
+
+
+
+<div class="col-md-12 imagem-top">
+
+    <div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-info">
+
+                    <div class="panel-heading">
+                        <h2 class="panel-title">Registrarse</h2>
+                    </div>
+                    <div class="col-md-12 iniciar-sesion">  
+                        <form action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="POST"  class="col-md-6 sesion">
+
+                            <label for="username" class="col-sm-4 control-label">Usuario</label>
+                            
+                            {%if form_errors(form.username)  is not empty %}
+                                <div class="bg-danger errores">{{ form_errors(form.username) }}</div>
+                            {% endif %}
+                            {{ form_widget(form.username, {'attr': {'class': 'form-control'}}) }}
+                            <label for="username" class="col-sm-4 control-label">Correo electrónico</label>
+                            {%if form_errors(form.email)  is not empty %}
+                                <div class="bg-danger errores">{{ form_errors(form.email) }}</div>
+                            {% endif %}
+                            {{ form_widget(form.email, {'attr': {'class': 'form-control'}}) }}
+
+                            {% for passwordField in form.plainPassword %}
+                                {% if loop.first == true %}
+                                    <label for="username" class="col-sm-4 control-label">Contraseña</label>
+                                    
+                            {%if form_errors(passwordField)  is not empty %}
+                                <div class="bg-danger errores">{{ form_errors(passwordField) }}</div>
+                            {% endif %}
+                                    {{form_widget(passwordField, { 'attr': {'class': 'form-control', 'id' : 'inputEmail' , 'placeholder':'Contraseña'}})}}
+
+                                {% else %}
+                                    <label for="username" class="col-sm-4 control-label">Repite tu contraseña</label>   
+                                    
+                            {%if form_errors(passwordField)  is not empty %}
+                                <div class="bg-danger errores">{{ form_errors(passwordField) }}</div>
+                            {% endif %}
+                                    {{form_widget(passwordField, { 'attr': {'class': 'form-control', 'id' : 'inputEmail' , 'placeholder':'Repite tu contraseña'}})}}
+
+                                {% endif %}
+                            {% endfor %}
+                            {{form_rest(form)}}
+                            <div class="btn-sesion">
+                                <input type="submit" value="Registrarse" class="btn btn-success pull-right" />
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

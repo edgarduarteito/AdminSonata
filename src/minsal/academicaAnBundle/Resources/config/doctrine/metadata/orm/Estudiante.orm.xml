@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Estudiante" table="estudiante">
+    <indexes>
+      <index name="id_asignatura_inscrita" columns="id_asignatura_inscrita"/>
+    </indexes>
+    <unique-constraints>
+      <unique-constraint name="carnet" columns="carnet"/>
+    </unique-constraints>
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="carnet" type="string" column="carnet" length="15" nullable="false"/>
+    <field name="nombres" type="string" column="nombres" length="100" nullable="false"/>
+    <field name="apellidos" type="string" column="apellidos" length="100" nullable="false"/>
+    <many-to-one field="idAsignaturaInscrita" target-entity="Asignatura">
+      <join-columns>
+        <join-column name="id_asignatura_inscrita" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

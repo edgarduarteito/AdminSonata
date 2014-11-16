@@ -1,0 +1,53 @@
+{% extends '::base.html.twig' %}
+
+{% block javascripts %}
+    {{parent()}}
+    <script type="text/javascript" src="{{ asset('bundles/minsalacademicaan/js/Estudiante/index.js') }}" ></script>
+{% endblock %}
+{% block body -%}
+    <h1>Lista de Estudiantes</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Carnet</th>
+                <th>Nombres</th>
+                <th>Apellidos</th>
+                <th>Asignatura</th>
+                <th>Evaluacion</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('estudiante_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.carnet }}</td>
+                <td>{{ entity.nombres }}</td>
+                <td>{{ entity.apellidos }}</td>
+                <td>{{ entity.idAsignaturaInscrita }}</td>
+                <td>{{ entity.idAsignaturaInscrita.getIdEvaluacionRealizada() }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('estudiante_show', { 'id': entity.id }) }}">Mostrar</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('estudiante_edit', { 'id': entity.id }) }}">Editar</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('estudiante_new') }}">
+                Crear una nueva entrada
+            </a>
+        </li>
+    </ul>
+    {% endblock %}
